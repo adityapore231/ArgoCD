@@ -42,7 +42,6 @@ Now you have two options :
 e.g of application.yaml file
 
 
-This repository shows how to Set UP in Minikube Cluster
 
 
 #### Declarative
