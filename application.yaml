@@ -11,7 +11,7 @@ spec:
     path: dev                                              # specific path to sync
   destination:
     server: https://kubernetes.default.svc   #kubernetes api server is the destination
-
+    namespaces: default
   syncPolicy:
     syncOptions:
     - CreateNamespace=True        #create namespace if not already exists
