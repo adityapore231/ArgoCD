@@ -47,3 +47,31 @@ This repository shows how to Set UP in Minikube Cluster
 
 
 
+#### application,yaml
+
+```yaml
+apiVersion: argoproj.io/v1alpha
+kind: Application
+metadata:
+  name: myapp
+  namespace: argocd
+spec: 
+  project: default
+  source:
+    repoURL : https://github.com/adityapore231/ArgoCD.git  #github is the source
+    targetRevision: HEAD                                   # HEAD measn last commit to repo
+    path: dev                                              # specific path to sync
+  destination:
+    server: https://kubernetes.default.svc   #kubernetes api server is the destination
+    namespaces: default
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=True        #create namespace if not already exists
+
+    automated:                     #track and sync
+      selfHeal: true              #changes mado to the live cluster will trigger automated sync (default is false)
+      prune: true                 #automatic sync wto delete resources                  
+
+```
+
