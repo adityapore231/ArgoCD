@@ -17,6 +17,6 @@ spec:
     syncOptions:
     - CreateNamespace=True        #create namespace if not already exists
 
-    automate:                     #track and sync
+    automated                     #track and sync
       selfHeal: true              #changes mado to the live cluster will trigger automated sync (default is false)
       prune: true                 #automatic sync wto delete resources                  
