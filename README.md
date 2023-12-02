@@ -1,8 +1,7 @@
 
-# Argo CD
+# Argo CD - GitOps
 
-This repository shows how to Set up argoCD in Minikube Cluster
-
+This repository shows how to Set up argoCD in Minikube Cluster.
 
 
 
@@ -46,8 +45,8 @@ e.g of application.yaml file
 This repository shows how to Set UP in Minikube Cluster
 
 
-
-#### application,yaml
+#### Declarative
+#### application.yaml
 
 ```yaml
 apiVersion: argoproj.io/v1alpha
