@@ -29,7 +29,7 @@ to get password :
 ```bash
   kubectl get secret argocd-initial-admin-secret-n argocd -o yaml
 ```
-Copy the encrepted pass and decrept through 
+Copy the encoded pass and decode through 
 ```bash
   echo ************************ | base64 --decode
 ```
